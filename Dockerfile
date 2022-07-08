@@ -2,11 +2,11 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
 WORKDIR /app
 
-copy
+#copy
 COPY *.csproj ./
 RUN dotnet restore
 
-copy the project File and build our release
+#copy the project File and build our release
 COPY . ./
 RUN dotnet publish -c Release -o out
 
