@@ -7,6 +7,7 @@ on:
 jobs:
   mirror:
     runs-on: ubuntu-latest
+    
 
     steps:
       - name: Checkout repository
@@ -27,4 +28,4 @@ jobs:
           git remote add mirror https://github.com/Naveenmorty/githubaction.git
           git push mirror main  # Change 'main' to your branch name
         env:
-          GH_TOKEN: ${{ secrets.REPO_NAME }}
+          GH_TOKEN: ${{ secrets.GIT_TOKEN }}
